@@ -1,0 +1,52 @@
+{
+  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "m365DevPreview",
+  "id": "6f594860-a30c-11ec-a96d-a51e8507cc7d",
+  "version": "0.0.1",
+  "packageName": "teamscollabapp",
+  "developer": {
+    "name": "Contoso",
+    "websiteUrl": "https://sridev.ngrok.io",
+    "privacyUrl": "https://sridev.ngrok.io/privacy.html",
+    "termsOfUseUrl": "https://sridev.ngrok.io/tou.html"
+  },
+  "name": {
+    "short": "teams collab app",
+    "full": "teams collab app"
+  },
+  "description": {
+    "short": "TODO: add short description here",
+    "full": "TODO: add full description here"
+  },
+  "icons": {
+    "outline": "icon-outline.png",
+    "color": "icon-color.png"
+  },
+  "accentColor": "#D85028",
+  "configurableTabs": [],
+  "staticTabs": [
+    {
+      "entityId": "03b6654e-d9b3-4739-bcfc-4acf17f2b9e1",
+      "name": "collab home",
+      "contentUrl": "https://sridev.ngrok.io/collabHomeTab/?name={loginHint}&tenant={tid}&theme={theme}",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "bots": [],
+  "connectors": [],
+  "composeExtensions": [],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "sridev.ngrok.io"
+  ],
+  "showLoadingIndicator": false,
+  "webApplicationInfo": {
+    "id": "0d3aa5dd-93b9-40e3-aaf4-73e209f153d3",
+    "resource": "api://sridev.ngrok.io/0d3aa5dd-93b9-40e3-aaf4-73e209f153d3"
+  }
+}

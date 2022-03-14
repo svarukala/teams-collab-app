@@ -1,0 +1,9 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "Contoso"
+    },
+    "libraryName": "teamsCollabApp",
+    "generator-version": "3.5.0"
+  }
+}
