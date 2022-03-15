@@ -16,7 +16,11 @@ function SPOReusable(props) {
   }, []);
   
   const getResourceAccessTokenOBO = async () => {
-    fetch(`https://azfun.ngrok.io/api/TeamsOBOHelper?ssoToken=${ssoToken}&tokenFor=spo`).then(async response =>{
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + ssoToken }
+    };
+    fetch(`https://azfun.ngrok.io/api/TeamsOBOHelper?tokenFor=spo`, requestOptions).then(async response =>{
         const responsePayload = await response.json();
         if (response.ok) {
             setResourceOboToken(responsePayload.access_token);

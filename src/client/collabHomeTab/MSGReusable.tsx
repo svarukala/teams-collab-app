@@ -16,7 +16,11 @@ function MSGReusable(props) {
   }, []);
   
   const getResourceAccessTokenOBO = async () => {
-    fetch(`https://azfun.ngrok.io/api/TeamsOBOHelper?ssoToken=${ssoToken}&tokenFor=msg`).then(async response =>{
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + ssoToken }
+    };
+    fetch(`https://azfun.ngrok.io/api/TeamsOBOHelper?tokenFor=msg`, requestOptions).then(async response =>{
         const responsePayload = await response.json();
         if (response.ok) {
             setResourceOboToken(responsePayload.access_token);
