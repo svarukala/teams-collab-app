@@ -83,9 +83,11 @@ function SPOReusable(props) {
         <br />
         {searchResults && <List items={searchResults} />}
         <br/>
-        {ssoToken && "ID Token: " + ssoToken}
+        {ssoToken && "Access token (for OBO svc): " + ssoToken}
+        {ssoToken && <a href={`https://jwt.ms/#access_token=${ssoToken}`} target="_blank">{"{jwt}"}</a>}
         <br/><br/>
-        {resourceOboToken && "Access Token: " + resourceOboToken}
+        {resourceOboToken && "Access token (for SPO rsc): " + resourceOboToken}
+        {resourceOboToken && <a href={`https://jwt.ms/#access_token=${resourceOboToken}`} target="_blank">{"{jwt}"}</a>}
     </div>
   );
 }
